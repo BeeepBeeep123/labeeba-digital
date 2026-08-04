@@ -1,20 +1,24 @@
 /* =========================================================
    Labeeba Digital — main stylesheet
-   Design language: dark minimal studio, signal-dot accents
+   Design language: black & white minimalist studio
+   All accent tokens below (--violet/--coral/--gold) are kept as
+   named variables for structural continuity with the rest of the
+   file, but are mapped to a strict grayscale palette — no hue
+   anywhere on the site, only black, white, and shades of gray.
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --void:      #0F0E13;
-  --surface:   #17161D;
-  --surface-2: #1E1D26;
-  --line:      #2B2A34;
-  --paper:     #F3F1EC;
-  --paper-dim: rgba(243,241,236,.65);
-  --violet:    #7C6CF0;
-  --coral:     #FF6B4A;
-  --gold:      #F0BE55;
+  --void:      #0A0A0A;
+  --surface:   #121212;
+  --surface-2: #1A1A1A;
+  --line:      #2E2E2E;
+  --paper:     #FAFAFA;
+  --paper-dim: rgba(250,250,250,.62);
+  --violet:    var(--paper);
+  --coral:     var(--paper);
+  --gold:      var(--paper);
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -23,14 +27,16 @@
 }
 
 /* Light theme override — applied when the toggle sets data-theme="light" on <body>.
-   Dark values above in :root act as the default theme. */
+   Dark values above in :root act as the default theme. Because the accent
+   tokens are defined as var(--paper), they flip automatically with the
+   theme: white accents on dark, black accents on light. */
 body[data-theme="light"] {
-  --void:      #F7F5EF;
-  --surface:   #FFFFFF;
+  --void:      #FFFFFF;
+  --surface:   #F6F6F6;
   --surface-2: #FFFFFF;
-  --line:      #E4E0D6;
-  --paper:     #17161D;
-  --paper-dim: rgba(23,22,29,.65);
+  --line:      #E2E2E2;
+  --paper:     #0A0A0A;
+  --paper-dim: rgba(10,10,10,.62);
 }
 body[data-theme="light"] .card,
 body[data-theme="light"] .product-card,
@@ -42,7 +48,7 @@ body[data-theme="light"] .info-card,
 body[data-theme="light"] .form-field input,
 body[data-theme="light"] .form-field select,
 body[data-theme="light"] .form-field textarea {
-  box-shadow: 0 1px 3px rgba(23,22,29,.06);
+  box-shadow: 0 1px 3px rgba(10,10,10,.05);
 }
 
 * { box-sizing: border-box; }
@@ -84,16 +90,15 @@ h1, h2, h3 {
   content: "";
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--coral);
-  box-shadow: 0 0 0 4px rgba(255,107,74,.15);
+  background: var(--paper);
+  box-shadow: 0 0 0 4px rgba(128,128,128,.15);
 }
-.eyebrow.violet::before { background: var(--violet); box-shadow: 0 0 0 4px rgba(124,108,240,.18); }
-.eyebrow.gold::before { background: var(--gold); box-shadow: 0 0 0 4px rgba(240,190,85,.18); }
+.eyebrow.violet::before { background: transparent; border: 1.5px solid var(--paper); box-shadow: 0 0 0 4px rgba(128,128,128,.15); }
+.eyebrow.gold::before { background: var(--paper-dim); box-shadow: 0 0 0 4px rgba(128,128,128,.15); }
 
 /* ---------- Nav ---------- */
 .site-header {
-  background: rgba(15,14,19,.85);
-  backdrop-filter: blur(10px);
+  background: var(--void);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -171,7 +176,7 @@ h1, h2, h3 {
   position: absolute;
   width: 620px; height: 620px;
   top: -280px; right: -180px;
-  background: radial-gradient(circle, rgba(124,108,240,.30), transparent 65%);
+  background: radial-gradient(circle, rgba(128,128,128,.20), transparent 65%);
   filter: blur(10px);
   pointer-events: none;
 }
@@ -180,7 +185,7 @@ h1, h2, h3 {
   position: absolute;
   width: 420px; height: 420px;
   bottom: -220px; left: -140px;
-  background: radial-gradient(circle, rgba(255,107,74,.18), transparent 65%);
+  background: radial-gradient(circle, rgba(128,128,128,.12), transparent 65%);
   pointer-events: none;
 }
 .hero-inner { position: relative; max-width: 780px; }
@@ -222,7 +227,7 @@ section { padding: 5.5rem 0; }
   padding: 1.8rem;
   transition: border-color .15s ease, transform .15s ease;
 }
-.card:hover { border-color: rgba(255,255,255,.22); transform: translateY(-3px); }
+.card:hover { border-color: rgba(128,128,128,.45); transform: translateY(-3px); }
 .card h3 { font-size: 1.15rem; margin: .9rem 0 .5rem; color: var(--paper); font-weight: 500; }
 .card p { color: var(--paper-dim); margin: 0; font-size: .93rem; }
 
@@ -232,9 +237,9 @@ section { padding: 5.5rem 0; }
   display: flex; align-items: center; justify-content: center;
   font-size: 1.2rem;
 }
-.icon-violet { background: rgba(124,108,240,.16); color: var(--violet); }
-.icon-coral { background: rgba(255,107,74,.16); color: var(--coral); }
-.icon-gold { background: rgba(240,190,85,.16); color: var(--gold); }
+.icon-violet { background: rgba(128,128,128,.10); color: var(--violet); }
+.icon-coral { background: rgba(128,128,128,.16); color: var(--coral); }
+.icon-gold { background: rgba(128,128,128,.24); color: var(--gold); }
 
 /* Service line-items */
 .service-row {
@@ -276,9 +281,9 @@ section { padding: 5.5rem 0; }
   border-radius: 999px;
   margin-bottom: .8rem;
 }
-.tag-violet { background: rgba(124,108,240,.18); color: var(--violet); }
-.tag-coral { background: rgba(255,107,74,.18); color: var(--coral); }
-.tag-gold { background: rgba(240,190,85,.18); color: var(--gold); }
+.tag-violet { background: rgba(128,128,128,.14); color: var(--violet); }
+.tag-coral { background: rgba(128,128,128,.20); color: var(--coral); }
+.tag-gold { background: rgba(128,128,128,.28); color: var(--gold); }
 .product-body h3 { margin: 0 0 .5rem; font-size: 1.1rem; color: var(--paper); font-weight: 500; }
 .product-body p { color: var(--paper-dim); font-size: .92rem; margin: 0 0 1.2rem; }
 
@@ -402,13 +407,15 @@ section { padding: 5.5rem 0; }
   outline: none;
   border-color: var(--coral);
 }
-.form-field input.invalid, .form-field textarea.invalid { border-color: #E5484D; }
+.form-field input.invalid, .form-field textarea.invalid { border-color: var(--paper); border-width: 2px; }
 .error-msg {
   display: none;
   font-size: .8rem;
-  color: #FF7A6B;
+  font-weight: 600;
+  color: var(--paper);
 }
 .error-msg.visible { display: block; }
+.error-msg.visible::before { content: "\26A0  "; }
 
 .form-success {
   background: var(--surface-2);
