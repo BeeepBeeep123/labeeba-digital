@@ -17,11 +17,34 @@
 
 <main>
 
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg viewBox="0 0 1400 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,120 C200,60 300,180 500,120 C700,60 800,180 1000,120 C1150,80 1250,140 1400,110" fill="none" stroke="#808080" stroke-width="1" opacity="0.35"/>
+        <path d="M0,220 C220,160 320,280 520,220 C720,160 820,280 1020,220 C1170,180 1270,240 1400,210" fill="none" stroke="#808080" stroke-width="1" opacity="0.28"/>
+        <path d="M0,320 C240,260 340,380 540,320 C740,260 840,380 1040,320 C1180,280 1280,340 1400,310" fill="none" stroke="#808080" stroke-width="1" opacity="0.22"/>
+        <path d="M0,420 C260,360 360,480 560,420 C760,360 860,480 1060,420 C1200,380 1300,440 1400,410" fill="none" stroke="#808080" stroke-width="1" opacity="0.18"/>
+        <path d="M0,520 C280,460 380,580 580,520 C780,460 880,580 1080,520 C1220,480 1320,540 1400,510" fill="none" stroke="#808080" stroke-width="1" opacity="0.14"/>
+        <path d="M0,600 C300,540 400,660 600,600 C800,540 900,660 1100,600 C1240,560 1340,620 1400,590" fill="none" stroke="#808080" stroke-width="1" opacity="0.10"/>
+      </svg>
+    </div>
+
+    <div class="container hero-top">
+      <span class="hero-scroll-label">Scroll &#8595;</span>
+      <span class="hero-badge">Available for new projects</span>
+    </div>
+
     <div class="container hero-inner">
-      <span class="eyebrow">Marketing &amp; AI Automation Studio</span>
-      <h1>Growth systems that run <span class="accent">while you sleep.</span></h1>
-      <p class="lede">Labeeba Digital designs the marketing infrastructure &mdash; SEO, campaigns, and AI-driven automation &mdash; that keeps your pipeline moving without a bigger team.</p>
+      <div class="hero-headline">
+        <span class="eyebrow" style="margin-bottom:1rem;">Marketing &amp; AI Automation Studio</span>
+        <h1>Growth systems<br>that run <span class="accent">while<br>you sleep.</span></h1>
+      </div>
+      <div class="hero-details">
+        <p class="lede">Labeeba Digital designs the marketing infrastructure &mdash; SEO, campaigns, and AI-driven automation &mdash; that keeps your pipeline moving without a bigger team.</p>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="hero-ctas">
         <a href="contact.html" class="btn btn-accent">Start a Project</a>
         <a href="products.html" class="btn btn-outline">See Our Work</a>
@@ -31,10 +54,19 @@
         <div><strong>3.2&times;</strong><span>Avg. lead lift</span></div>
         <div><strong>6 wks</strong><span>Typical build time</span></div>
       </div>
+      <a href="#approach" class="hero-scroll-btn" aria-label="Scroll to next section">&#8595;</a>
+    </div>
+
+    <div class="container hero-bottom">
+      <a href="mailto:hello@labeebadigital.com">Email</a>
+      <span class="divider">/</span>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="divider">/</span>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
     </div>
   </section>
 
-  <section>
+  <section id="approach">
     <div class="container">
       <span class="eyebrow violet">Our Approach</span>
       <h2 class="section-title">Strategy first, automation second.</h2>
