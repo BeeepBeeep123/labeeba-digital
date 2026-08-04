@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal | Labeeba Digital</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #blog-list { display:grid; grid-template-columns: repeat(3,1fr); gap:1.4rem; }
+  @media (max-width:860px){ #blog-list{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ #blog-list{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+
+  <section style="padding-bottom:1.2rem;">
+    <div class="container">
+      <span class="eyebrow">Journal</span>
+      <h1 style="margin:.9rem 0 1.1rem;font-size:clamp(2rem,4vw,2.8rem);">Notes on systems, growth, and automation.</h1>
+      <p class="section-intro">Short write-ups from inside client work &mdash; what we built, why, and what we'd do differently.</p>
+      <div class="filter-bar">
+        <input
+          type="text"
+          id="filter-input"
+          placeholder="Search by title or category..."
+          data-card-selector=".post-card"
+          data-title-selector="h3"
+          data-category-selector=".post-meta"
+          aria-label="Filter posts by title or category">
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container">
+
+      <!-- Populated by js/blog.js from data/posts.json -->
+      <div id="blog-list"></div>
+      <p id="no-results" class="no-results">No posts match that search. Try a different title or category.</p>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/theme.js"></script>
+<script src="js/components.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>

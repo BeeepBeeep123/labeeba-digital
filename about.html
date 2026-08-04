@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Labeeba Digital</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .founder-block { display:grid; grid-template-columns: .8fr 1.2fr; gap: 2.8rem; align-items:center; }
+  .founder-photo {
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    background: radial-gradient(circle at 30% 30%, rgba(124,108,240,.35), transparent 60%),
+                radial-gradient(circle at 75% 75%, rgba(255,107,74,.28), transparent 60%),
+                var(--surface-2);
+    border: 1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-display);
+    color: var(--paper);
+    font-size: 2.6rem;
+  }
+  @media (max-width:860px){ .founder-block{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<main>
+
+  <section style="padding-bottom:2rem;">
+    <div class="container">
+      <span class="eyebrow">Our Story</span>
+      <h1 style="margin:.9rem 0 1.1rem;font-size:clamp(2rem,4vw,2.8rem);">Built by someone tired of duct-taped marketing.</h1>
+      <p class="section-intro">Labeeba Digital started as a one-person studio solving a problem its founder kept running into: growth plans that fall apart the moment nobody's watching them.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="container founder-block">
+      <div class="founder-photo" aria-hidden="true">LD</div>
+      <div>
+        <h2 class="section-title">How it started</h2>
+        <p>Labeeba spent years watching small businesses run marketing the same fragile way: a freelancer here, a boosted post there, nothing connected and nothing measured. Every campaign worked until someone stopped paying attention to it.</p>
+        <p>Labeeba Digital was built to fix that &mdash; not with more channels, but with systems. Every engagement starts with a strategy the client actually understands, then layers in the automation that keeps it running after the kickoff calls are over.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface">
+    <div class="container">
+      <span class="eyebrow violet">What We Stand For</span>
+      <h2 class="section-title">Our values</h2>
+      <ul class="values-list">
+        <li><strong>Systems over stunts.</strong> <span>We build infrastructure that compounds, not campaigns that need to be reinvented every quarter.</span></li>
+        <li><strong>Transparent reporting.</strong> <span>Every client sees the same dashboard we do &mdash; no vanity metrics, no black boxes.</span></li>
+        <li><strong>Automate the boring parts.</strong> <span>AI handles the repetitive work so human attention goes where it actually matters.</span></li>
+        <li><strong>Right-sized, not maximal.</strong> <span>We recommend what a business can actually run, not what sells the biggest retainer.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="eyebrow coral">The Team</span>
+      <h2 class="section-title">Small studio, full-stack skillset</h2>
+      <p class="section-intro">A lean team covering strategy, design, and automation end to end.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" style="background:var(--violet);">LB</div>
+          <h3>Labeeba</h3>
+          <p>Founder &amp; Strategy Lead</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:var(--coral);">NK</div>
+          <h3>Nasir Khan</h3>
+          <p>SEO &amp; Content</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:var(--gold);">RP</div>
+          <h3>Riya Patel</h3>
+          <p>Automation Engineer</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:#5b5468;">OT</div>
+          <h3>Omar Tahir</h3>
+          <p>Web &amp; Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="surface" style="text-align:center;">
+    <div class="container">
+      <h2 class="section-title">Curious how we work?</h2>
+      <p class="section-intro" style="margin-left:auto;margin-right:auto;">See the specific services that make up a typical engagement.</p>
+      <a href="services.html" class="btn btn-accent">See What We Offer</a>
+    </div>
+  </section>
+
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="js/theme.js"></script>
+<script src="js/components.js"></script>
+</body>
+</html>
